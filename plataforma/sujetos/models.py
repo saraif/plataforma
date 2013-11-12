@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib import admin
 from django.contrib.admin import SimpleListFilter
 
+# Comentario de prueba
 
 class Persona(models.Model):
     MASCULINO = 'M'
