@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # Django settings for plataforma project.
+# Comentario pa' proba
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
