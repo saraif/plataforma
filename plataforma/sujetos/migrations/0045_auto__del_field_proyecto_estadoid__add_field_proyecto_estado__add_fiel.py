@@ -13,19 +13,19 @@ class Migration(SchemaMigration):
 
         # Adding field 'Proyecto.estado'
         db.add_column(u'sujetos_proyecto', 'estado',
-                      self.gf('django.db.models.fields.related.ForeignKey')(to=orm['sujetos.Estado'], null=True, blank=True),
+                      self.gf('django.db.models.fields.related.ForeignKey')(to=orm['sujetos.Estado'], null=False, blank=True),
                       keep_default=False)
 
         # Adding field 'Proyecto.municipio'
         db.add_column(u'sujetos_proyecto', 'municipio',
-                      self.gf('django.db.models.fields.related.ForeignKey')(to=orm['sujetos.Municipio'], null=True, blank=True),
+                      self.gf('django.db.models.fields.related.ForeignKey')(to=orm['sujetos.Municipio'], null=False, blank=True),
                       keep_default=False)
 
 
     def backwards(self, orm):
         # Adding field 'Proyecto.estadoid'
         db.add_column(u'sujetos_proyecto', 'estadoid',
-                      self.gf('django.db.models.fields.related.ForeignKey')(to=orm['sujetos.Estado'], null=True, blank=True),
+                      self.gf('django.db.models.fields.related.ForeignKey')(to=orm['sujetos.Estado'], null=False, blank=True),
                       keep_default=False)
 
         # Deleting field 'Proyecto.estado'

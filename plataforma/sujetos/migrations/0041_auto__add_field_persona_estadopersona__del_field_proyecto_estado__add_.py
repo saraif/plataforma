@@ -10,7 +10,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         # Adding field 'Persona.estadopersona'
         db.add_column(u'sujetos_persona', 'estadopersona',
-                      self.gf('django.db.models.fields.related.ForeignKey')(to=orm['sujetos.Estado'], null=True, blank=True),
+                      self.gf('django.db.models.fields.related.ForeignKey')(to=orm['sujetos.Estado'], null=False, blank=True),
                       keep_default=False)
 
         # Deleting field 'Proyecto.estado'
@@ -18,7 +18,7 @@ class Migration(SchemaMigration):
 
         # Adding field 'Proyecto.estadoid'
         db.add_column(u'sujetos_proyecto', 'estadoid',
-                      self.gf('django.db.models.fields.related.ForeignKey')(to=orm['sujetos.Estado'], null=True, blank=True),
+                      self.gf('django.db.models.fields.related.ForeignKey')(to=orm['sujetos.Estado'], null=False, blank=True),
                       keep_default=False)
 
 
